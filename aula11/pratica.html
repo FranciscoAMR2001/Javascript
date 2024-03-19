@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pratica condições</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Informe seu país: <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="nacional()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function nacional() {
+            var paisi = window.document.querySelector('input#pais')
+            var res = window.document.querySelector('div#res')
+            var naci = 'Brasil'
+            if (paisi == naci) {
+                res.innerHTML = `você é Brasileiro`
+            } else {
+                res.innerHTML = `você é Estrangeiro`
+            } 
+        }
+    </script>
+</body>
+</html>
