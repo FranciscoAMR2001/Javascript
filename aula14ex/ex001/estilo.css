@@ -3,7 +3,6 @@
 body {
     background-color: rgb(70, 142, 236);
    font: normal 1em Arial, Helvetica, sans-serif;
-
 }
 
 header {
@@ -19,6 +18,11 @@ section {
     margin: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.350);
 }
+
+div#res {
+
+}
+    
 
 
 
