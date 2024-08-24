@@ -1,32 +1,35 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <h1>texte de nacionalidade</h1>
+    <h1>Digite um país</h1>
+  
+  <input type="text" id="pais" placeholder="Escreva o nome do país">
+  <button onclick="verificar()">Verificar</button>
+  
+  <p id="resultado"></p>
+  
+  <script>
+    function verificar() {
+      let pais = document.getElementById("pais").value.trim();
 
-    pais: <input type="text">
-    <input type="button" value="verificar" onclick="verificar()">
-    <div id="res">
+      // Verifica se a primeira letra é minúscula e converte
+      if (pais[0] === pais[0].toLowerCase()) {
+        pais = pais[0].toUpperCase() + pais.slice(1);
+      }
 
-    </div>
-
-    <script>
-        
-        function verificar() {
-            let pais = document.querySelector('input').value;
-            let res = document.querySelector('div#res');
-
-            if (pais === 'Brasil') {
-                res.innerHTML = '<p>Você é brasileiro</p>';
-            } else {
-                res.innerHTML = '<p>Você não é brasileiro</p>';
-            }
-        }
-            
-    </script>
+      // Verifica se o valor digitado é "Brasil"
+      if (pais === "Brasil") {
+        document.getElementById("resultado").innerText = "Você é brasileiro!";
+      } else {
+        document.getElementById("resultado").innerText = "Você é estrangeiro!";
+      }
+    }
+  </script>
 </body>
 </html>
